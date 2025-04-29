@@ -6,7 +6,7 @@ OUT_DIR  = verilog
 SIM_DIR  = sim_files
 
 # List of BSV files (without extension)
-FILE_NAMES = RegisterFile  # Add more as needed
+FILE_NAMES = PC RegisterFile Alu Decoder # Add more as needed
 
 # Generate source/target file lists
 BSV_FILES       = $(addprefix $(SRC_DIR)/,$(addsuffix .bsv,$(FILE_NAMES)))
@@ -29,6 +29,7 @@ $(OUT_DIR)/%.v: $(SRC_DIR)/%.bsv | $(OUT_DIR)
 	@echo "Target file: $@"
 	@echo "Running: $(BSC) -u -verilog -g mk$* $<"
 	$(BSC) -u -verilog -g mk$* $<
+	rm -f $(SRC_DIR)/$*.bo
 	@if [ -f $(SRC_DIR)/mk$*.v ]; then \
 		mv $(SRC_DIR)/mk$*.v $@; \
 		echo "Moved $(SRC_DIR)/mk$*.v -> $@"; \

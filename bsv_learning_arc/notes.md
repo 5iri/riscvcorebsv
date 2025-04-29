@@ -13,6 +13,17 @@
     bsc -u -verilog -g <module_name> <package_name>.bsv
 ```
 
+# BSV Learn 
+ 
+## Types  in bsv
+ - A type is _grouping_ of values:
+  - ``` Bit#(N) // N-bit vector which has a numeric type N-bit ```
+  - ``` bit [N-1:0] // Analogous to Bit#(N)``` 
+  - ```Bool // 1-bit value representing True and False ```
+  - ```UInt#(32)  // unsigned integers, 32-bits wide```
+  - ```Vector#(N, Int#(M)) // Vector ```
+
+
 # BSV Cheat Sheet
 
 ## Basic Structure
