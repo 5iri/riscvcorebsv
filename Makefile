@@ -6,7 +6,7 @@ OUT_DIR  = verilog
 SIM_DIR  = sim_files
 
 # List of BSV files (without extension)
-FILE_NAMES = PC RegisterFile Alu Decoder # Add more as needed
+FILE_NAMES = PC RegisterFile Alu Decoder ControlUnit # Add more as needed
 
 # Generate source/target file lists
 BSV_FILES       = $(addprefix $(SRC_DIR)/,$(addsuffix .bsv,$(FILE_NAMES)))

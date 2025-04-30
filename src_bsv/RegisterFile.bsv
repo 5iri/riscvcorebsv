@@ -1,13 +1,10 @@
 // src_bsv/RegisterFile.bsv
 
-package RegisterFile;
-
 import Prelude::*;    // Bool, Bit#, etc.
 import Clocks::*;     // Clock, Reset, mkReg
 import RegFile::*;    // RegFile#, mkRegFile#, upd, sub
 
 // ------------------------------------------------------------------
-// Same ports as your Verilog:
 //
 //  - write(wr_en, rd[4:0], data[31:0])
 //  - read1(rs1_valid, rs1[4:0]) -> 32-bit or 0
@@ -47,5 +44,3 @@ module mkRegisterFile#(Clock clk, Reset rst)(RegisterFileIfc);
     if (v) return rf.sub(rs2); else return 0;
   endmethod
 endmodule
-
-endpackage

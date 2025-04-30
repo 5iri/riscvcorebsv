@@ -1,7 +1,6 @@
 // -----------------------------------------------------------------------------
 //  Decoder.bsv  –  RV32-I/M subset, flat-port interface (compile-ready)
 // -----------------------------------------------------------------------------
-package Decoder;
 
 import Prelude::*;
 import Vector::*;         // replicate / pack
@@ -161,4 +160,3 @@ module mkDecoder(DecoderIfc);
   method Bit#(45) out_signal() = r_sig;
 
 endmodule : mkDecoder
-endpackage
